@@ -19,7 +19,7 @@
                 <!-- BLS invoice id for response -->
                 <xs:element ref="transaction-id" minOccurs="0"/>
                 
-                <!-- is this a recurring transaction: true/false -->
+                <!-- is this a recurring transaction: ECOMMERCE/RECURRING -->
                 <xs:element ref="recurring-transaction" minOccurs="1" maxOccurs="1"/>
                 
                 <xs:element ref="soft-descriptor" minOccurs="1" maxOccurs="1"/>
