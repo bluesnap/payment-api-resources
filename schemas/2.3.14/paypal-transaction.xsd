@@ -3,7 +3,7 @@
 <xs:schema xmlns="http://ws.plimus.com" xmlns:xs="http://www.w3.org/2001/XMLSchema"
 	xmlns:jaxb="http://java.sun.com/xml/ns/jaxb" jaxb:version="2.0"
 	targetNamespace="http://ws.plimus.com">
-
+	<xs:include schemaLocation="order-common.xsd"/>
 	<xs:element name="paypal-transaction">
 		<xs:complexType>
 			<xs:sequence>
@@ -54,10 +54,5 @@
                     <xs:enumeration value="2" />
             </xs:restriction>
         </xs:simpleType>
-    </xs:element>
-    	<xs:element name="order-id">
-		<xs:simpleType>
-			<xs:restriction base="xs:long" />
-		</xs:simpleType>
 	</xs:element>
 </xs:schema>
