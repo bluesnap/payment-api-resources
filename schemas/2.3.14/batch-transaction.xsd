@@ -4,8 +4,9 @@
     targetNamespace="http://ws.plimus.com">
     
 <xs:include schemaLocation="transaction.xsd"/>
+<xs:include schemaLocation="alternative-transaction.xsd"/>
 
-<xs:include schemaLocation="store.xsd"/>
+<xs:include schemaLocation="store-common.xsd"/>
 
     <xs:element name="batch-transaction">
         <xs:complexType>
@@ -20,6 +21,7 @@
  
             	<!-- input and output -->
                 <xs:element ref="card-transaction" minOccurs="0" maxOccurs="unbounded" />
+                <xs:element ref="alt-transaction" minOccurs="0" maxOccurs="unbounded" />
                 
                 <!-- output -->
                 <xs:element ref="processing-info" minOccurs="0" maxOccurs="1" />

@@ -10,9 +10,6 @@
 	<xs:include schemaLocation="transaction-common.xsd" />
 	<xs:include schemaLocation="transaction-meta-data.xsd" />
 	<xs:include schemaLocation="paypal-transaction.xsd" />
-<!-- 	<xs:include schemaLocation="ecp-transaction.xsd" /> -->
-	<xs:include schemaLocation="shopper.xsd" />
-
 
 	<xs:element name="alt-transaction">
 		<xs:complexType>
