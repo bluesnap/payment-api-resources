@@ -10,6 +10,8 @@
 	<xs:include schemaLocation="transaction-common.xsd" />
 	<xs:include schemaLocation="transaction-meta-data.xsd" />
 	<xs:include schemaLocation="paypal-transaction.xsd" />
+	<xs:include schemaLocation="ecp-transaction.xsd" />
+
 
 	<xs:element name="alt-transaction">
 		<xs:complexType>
@@ -23,6 +25,7 @@
 				<xs:element ref="payer-info" minOccurs="0" maxOccurs="1" />
 				<xs:element ref="vaulted-shopper-id" minOccurs="0" maxOccurs="1" />
 				<xs:element ref="paypal-transaction" minOccurs="0" maxOccurs="1" />
+				<xs:element ref="ecp-transaction" minOccurs="0" maxOccurs="1" />
 				<xs:element ref="transaction-meta-data" minOccurs="0" maxOccurs="1" />
 				<xs:element ref="transaction-fraud-info" minOccurs="0" maxOccurs="1" />
 				<!-- for response -->

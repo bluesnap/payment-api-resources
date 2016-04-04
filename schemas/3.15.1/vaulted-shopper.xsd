@@ -4,6 +4,8 @@
 	targetNamespace="http://ws.plimus.com">	
 	<xs:include schemaLocation="transaction.xsd"/>
 	<xs:include schemaLocation="shopper-common.xsd"/>
+	<xs:include schemaLocation="ecp-info.xsd"/>
+	
 	
 	<xs:element name="vaulted-shopper">
 		<xs:complexType>
@@ -14,6 +16,7 @@
 				<xs:element ref="country" minOccurs="0" />				
 				<xs:element ref="state" minOccurs="0" />
 				<xs:element ref="address" minOccurs="0" />
+				<xs:element ref="city" minOccurs="0" />
 				<xs:element ref="zip" minOccurs="0" />
 				<xs:element ref="phone" minOccurs="0" />
 				<xs:element ref="shopper-currency" minOccurs="0" />				
@@ -27,6 +30,7 @@
 		<xs:complexType>
 			<xs:sequence>
 				<xs:element ref="credit-card-info" minOccurs="0" maxOccurs="unbounded" />
+				<xs:element ref="ecp-info" minOccurs="0" maxOccurs="1" />			
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>	

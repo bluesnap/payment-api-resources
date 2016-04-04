@@ -39,6 +39,8 @@
             
                 <xs:element ref="credit-card" minOccurs="1" maxOccurs="1"/>
                 
+                <xs:element ref="hosted-field-token" minOccurs="0" maxOccurs="1" />
+                
                 <xs:element ref="transaction-meta-data" minOccurs="0" maxOccurs="1"/>
                 
                 
@@ -84,6 +86,12 @@
 		<xs:simpleType>
 			<xs:restriction base="xs:string" />
 		</xs:simpleType>
-	</xs:element>					      
-	    
+	</xs:element>
+	
+	<xs:element name="hosted-field-token">
+        <xs:simpleType>
+            <xs:restriction base="xs:string" />
+        </xs:simpleType>
+    </xs:element>
+    
 </xs:schema>

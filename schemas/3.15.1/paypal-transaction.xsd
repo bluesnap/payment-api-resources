@@ -4,6 +4,7 @@
 	xmlns:jaxb="http://java.sun.com/xml/ns/jaxb" jaxb:version="2.0"
 	targetNamespace="http://ws.plimus.com">
 	<xs:include schemaLocation="order-common.xsd"/>
+	
 	<xs:element name="paypal-transaction">
 		<xs:complexType>
 			<xs:sequence>
@@ -12,10 +13,14 @@
 				<xs:element ref="cancel-url" minOccurs="0" maxOccurs="1" />
 				<xs:element ref="req-confirm-shipping" minOccurs="0" maxOccurs="1"/>
                 <xs:element ref="no-shipping" minOccurs="0" maxOccurs="1"/>
+                <xs:element ref="in-context" minOccurs="0" maxOccurs="1"/>                
+                <xs:element ref="recurring" minOccurs="0" maxOccurs="1"/>
 
 				<!-- for the response: -->
 				<xs:element ref="paypal-url" minOccurs="0" maxOccurs="1" />
 				<xs:element ref="order-id" minOccurs="0" maxOccurs="1" />
+				<xs:element ref="paypal-subscription-id" minOccurs="0" maxOccurs="1" />
+				
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
@@ -54,5 +59,23 @@
                     <xs:enumeration value="2" />
             </xs:restriction>
         </xs:simpleType>
+	</xs:element>
+	<xs:element name="in-context">
+		<xs:simpleType>
+			<xs:restriction base="xs:boolean" />
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="recurring">
+        <xs:simpleType>
+            <xs:restriction base="xs:int">
+                    <xs:enumeration value="0" />
+                    <xs:enumeration value="1" />
+            </xs:restriction>
+        </xs:simpleType>
+	</xs:element>
+		<xs:element name="paypal-subscription-id">
+		<xs:simpleType>
+			<xs:restriction base="xs:long" />
+		</xs:simpleType>
 	</xs:element>
 </xs:schema>
