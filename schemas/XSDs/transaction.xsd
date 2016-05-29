@@ -37,13 +37,18 @@
                 
                 <xs:element ref="transaction-fraud-info" minOccurs="0" maxOccurs="1"/>
             
-                <xs:element ref="credit-card" minOccurs="1" maxOccurs="1"/>
+                <xs:element ref="credit-card" minOccurs="0" maxOccurs="1"/>
+                
+                <xs:element ref="hosted-field-token" minOccurs="0" maxOccurs="1" />
+                
+                <xs:element ref="wallet-id" minOccurs="0" maxOccurs="1" />
                 
                 <xs:element ref="transaction-meta-data" minOccurs="0" maxOccurs="1"/>
                 
                 
                 <!-- for response -->
                 <xs:element ref="processing-info" minOccurs="0" maxOccurs="1" />
+                <xs:element ref="fraud-result-info" minOccurs="0" maxOccurs="1" />
  
            </xs:sequence>
         </xs:complexType>
@@ -85,5 +90,11 @@
 			<xs:restriction base="xs:string" />
 		</xs:simpleType>
 	</xs:element>
+	
+	<xs:element name="hosted-field-token">
+        <xs:simpleType>
+            <xs:restriction base="xs:string" />
+        </xs:simpleType>
+    </xs:element>
     
 </xs:schema>

@@ -4,6 +4,7 @@
 	xmlns:jaxb="http://java.sun.com/xml/ns/jaxb" jaxb:version="2.0"
 	targetNamespace="http://ws.plimus.com">
 	<xs:include schemaLocation="order-common.xsd"/>
+	<xs:include schemaLocation="url-common.xsd"/>
 	
 	<xs:element name="paypal-transaction">
 		<xs:complexType>
@@ -23,18 +24,6 @@
 				
 			</xs:sequence>
 		</xs:complexType>
-	</xs:element>
-
-	<xs:element name="return-url">
-		<xs:simpleType>
-			<xs:restriction base="xs:string" />
-		</xs:simpleType>
-	</xs:element>
-
-	<xs:element name="cancel-url">
-		<xs:simpleType>
-			<xs:restriction base="xs:string" />
-		</xs:simpleType>
 	</xs:element>
 
 	<xs:element name="paypal-url">

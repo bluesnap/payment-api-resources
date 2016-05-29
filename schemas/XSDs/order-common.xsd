@@ -8,4 +8,9 @@
 			<xs:restriction base="xs:long" />
 		</xs:simpleType>
 	</xs:element>
+	<xs:element name="authorized-by-shopper">
+		<xs:simpleType>
+			<xs:restriction base="xs:boolean" />
+		</xs:simpleType>
+	</xs:element>
 </xs:schema>

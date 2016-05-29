@@ -37,4 +37,21 @@
             </xs:sequence>
         </xs:complexType>
     </xs:element>
+    
+    
+    <xs:element name="fraud-result-info">
+       <xs:complexType> 
+            <xs:sequence>
+                <xs:element ref="device-data-collector" minOccurs="0" maxOccurs="1" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>   
+    <xs:element name="device-data-collector">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                    <xs:enumeration value="Y" />
+                    <xs:enumeration value="N" />
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
 </xs:schema>

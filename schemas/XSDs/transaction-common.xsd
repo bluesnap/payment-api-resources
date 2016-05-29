@@ -22,4 +22,9 @@
 			<xs:restriction base="xs:long" />
 		</xs:simpleType>
 	</xs:element>  
+	<xs:element name="wallet-id">
+        <xs:simpleType>
+            <xs:restriction base="xs:long" />
+        </xs:simpleType>
+    </xs:element>
 </xs:schema>

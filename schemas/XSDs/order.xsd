@@ -65,6 +65,7 @@
 				<xs:element ref="web-info" />
 				<xs:element ref="fraud-info" minOccurs="0"/>
 				<xs:element ref="three-d-authenticated-info" minOccurs="0" />
+				<xs:element ref="authorized-by-shopper" minOccurs="0" maxOccurs="1" />				
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
@@ -173,7 +174,8 @@
 				<xs:element ref="expected-total-price" minOccurs="0" />
 				<xs:element ref="affiliate-id" minOccurs="0" maxOccurs="1" />
 				<xs:element ref="post-sale-info" minOccurs="0" />
-				<xs:element ref="fulfillment" minOccurs="0" maxOccurs="1" />
+                <xs:element ref="fulfillment" minOccurs="0" maxOccurs="1" />
+                <xs:element ref="fraud-result-info" minOccurs="0" maxOccurs="1" />
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
