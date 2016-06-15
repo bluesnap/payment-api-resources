@@ -97,6 +97,7 @@
 		<xs:complexType>
 			<xs:sequence>
 				<xs:element ref="invoice-id"/>
+				<xs:element ref="original-invoice-id" minOccurs="0"/>
 				<xs:element ref="url"/>
 				<xs:element ref="financial-transactions"/>
 			</xs:sequence>
@@ -152,11 +153,6 @@
 			<xs:restriction base="xs:string" />
 		</xs:simpleType>
 	</xs:element>
-	<xs:element name="payment-method">
-		<xs:simpleType>
-			<xs:restriction base="xs:string" />
-		</xs:simpleType>
-	</xs:element>
 	<xs:element name="invoice-status">
 		<xs:simpleType>
 			<xs:restriction base="xs:string" />
@@ -200,6 +196,11 @@
 		</xs:simpleType>
 	</xs:element>		
 	<xs:element name="invoice-id">
+		<xs:simpleType>
+			<xs:restriction base="xs:long" />
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="original-invoice-id">
 		<xs:simpleType>
 			<xs:restriction base="xs:long" />
 		</xs:simpleType>

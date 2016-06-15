@@ -6,6 +6,7 @@
 	<xs:include schemaLocation="shopper-common.xsd"/>
 	<xs:include schemaLocation="ecp-info.xsd"/>
 	<xs:include schemaLocation="shipping-contact-info.xsd"/>
+	<xs:include schemaLocation="order-common.xsd"/>
 	
 	
 	<xs:element name="vaulted-shopper">
@@ -17,6 +18,7 @@
 				<xs:element ref="country" minOccurs="0" />				
 				<xs:element ref="state" minOccurs="0" />
 				<xs:element ref="address" minOccurs="0" />
+				<xs:element ref="address2" minOccurs="0" />
 				<xs:element ref="city" minOccurs="0" />
 				<xs:element ref="zip" minOccurs="0" />
 				<xs:element ref="phone" minOccurs="0" />
@@ -26,6 +28,7 @@
 				<xs:element ref="shipping-contact-info" minOccurs="0" />
 				<xs:element ref="transaction-fraud-info" minOccurs="0" />
 				<xs:element ref="fraud-result-info" minOccurs="0" maxOccurs="1" />
+				<xs:element ref="last-payment-info" minOccurs="0" maxOccurs="1" />
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
@@ -37,5 +40,16 @@
 				<xs:element ref="ecp-info" minOccurs="0" maxOccurs="1" />			
 			</xs:sequence>
 		</xs:complexType>
-	</xs:element>	
+	</xs:element>
+
+	<xs:element name="last-payment-info">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="payment-method" minOccurs="1" maxOccurs="1" />
+				<xs:element ref="credit-card" minOccurs="0" maxOccurs="1" />
+				<xs:element ref="ecp" minOccurs="0" maxOccurs="1" />			
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
 </xs:schema>

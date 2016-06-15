@@ -5,6 +5,7 @@
 	targetNamespace="http://ws.plimus.com">
 	<xs:include schemaLocation="order-common.xsd"/>
 	<xs:include schemaLocation="url-common.xsd"/>
+	<xs:include schemaLocation="paypal-error.xsd"/>
 	
 	<xs:element name="paypal-transaction">
 		<xs:complexType>
@@ -21,7 +22,10 @@
 				<xs:element ref="paypal-url" minOccurs="0" maxOccurs="1" />
 				<xs:element ref="order-id" minOccurs="0" maxOccurs="1" />
 				<xs:element ref="paypal-subscription-id" minOccurs="0" maxOccurs="1" />
-				
+					<!-- for the PP error code: -->
+				<xs:element ref="error-code" minOccurs="0" maxOccurs="1" />
+				<xs:element ref="short-comment" minOccurs="0" maxOccurs="1" />
+				<xs:element ref="long-comment" minOccurs="0" maxOccurs="1" />
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
@@ -56,9 +60,13 @@
 	</xs:element>
 	<xs:element name="recurring">
         <xs:simpleType>
-            <xs:restriction base="xs:int">
+            <xs:restriction base="xs:string">
                     <xs:enumeration value="0" />
                     <xs:enumeration value="1" />
+                    <xs:enumeration value="Y" />
+                    <xs:enumeration value="N" />
+                    <xs:enumeration value="true" />
+                    <xs:enumeration value="false" />
             </xs:restriction>
         </xs:simpleType>
 	</xs:element>

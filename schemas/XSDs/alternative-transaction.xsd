@@ -18,14 +18,13 @@
 			<xs:sequence>
 				<xs:element ref="merchant-transaction-id" minOccurs="0"	maxOccurs="1" />
 				<!-- BLS invoice id for response -->
-<!-- 				<xs:element ref="action-type" minOccurs="0"	maxOccurs="1" /> -->
 				<xs:element ref="transaction-id" minOccurs="0" />
 				<xs:element ref="soft-descriptor" minOccurs="0"	maxOccurs="1" />
 				<xs:element ref="amount" minOccurs="1" maxOccurs="1" />
 				<xs:element ref="currency" minOccurs="1" maxOccurs="1" />
 				<xs:element ref="payer-info" minOccurs="0" maxOccurs="1" />
 				<xs:element ref="vaulted-shopper-id" minOccurs="0" maxOccurs="1" />
-<!-- 				<xs:element ref="transaction-description" minOccurs="0" maxOccurs="1"/> -->
+				<xs:element ref="transaction-description" minOccurs="0" maxOccurs="1"/>
 				<xs:element ref="paypal-transaction" minOccurs="0" maxOccurs="1" />
 				<xs:element ref="ecp-transaction" minOccurs="0" maxOccurs="1" />
 				<xs:element ref="transaction-meta-data" minOccurs="0" maxOccurs="1" />
@@ -48,6 +47,7 @@
 				<xs:element ref="country" minOccurs="0" maxOccurs="1" />
 				<xs:element ref="state" minOccurs="0" maxOccurs="1" />
 				<xs:element ref="address" minOccurs="0" maxOccurs="1" />
+				<xs:element ref="address2" minOccurs="0" maxOccurs="1" />
 				<xs:element ref="city" minOccurs="0" maxOccurs="1" />
 				<xs:element ref="zip" minOccurs="0" maxOccurs="1" />
 				<xs:element ref="phone" minOccurs="0" maxOccurs="1" />
@@ -56,14 +56,9 @@
 		</xs:complexType>
 	</xs:element>
 	
-<!-- 	<xs:element name="action-type">
-		<xs:simpleType>
-			<xs:restriction base="xs:string" />
-		</xs:simpleType>
-	</xs:element>
 	<xs:element name="transaction-description">
 		<xs:simpleType>
 			<xs:restriction base="xs:string" />
 		</xs:simpleType>
-	</xs:element> -->
+	</xs:element>
 </xs:schema>
