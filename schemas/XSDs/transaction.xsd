@@ -38,8 +38,11 @@
                 <xs:element ref="transaction-fraud-info" minOccurs="0" maxOccurs="1"/>
             
                 <xs:element ref="credit-card" minOccurs="0" maxOccurs="1"/>
-                
+
+				<!-- deprecated -->
                 <xs:element ref="hosted-field-token" minOccurs="0" maxOccurs="1" />
+                
+                <xs:element ref="pf-token" minOccurs="0" maxOccurs="1" />
                 
                 <xs:element ref="wallet-id" minOccurs="0" maxOccurs="1" />
                 

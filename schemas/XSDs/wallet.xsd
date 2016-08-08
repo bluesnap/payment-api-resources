@@ -8,6 +8,8 @@
 	<xs:include schemaLocation="credit-card-info.xsd"/>
 	<xs:include schemaLocation="shipping-contact-info.xsd"/>
 	<xs:include schemaLocation="item-price.xsd"/>
+	<xs:include schemaLocation="transaction-common.xsd"/>
+	
 
 	<xs:element name="wallet">
 		<xs:complexType>
@@ -16,6 +18,9 @@
 				<xs:element ref="store-id" minOccurs="0" maxOccurs="1" />
 				<xs:element ref="origin-url" minOccurs="0" maxOccurs="1" />
 				<xs:element ref="return-url" minOccurs="0" maxOccurs="1" />
+				<xs:element ref="call-id" minOccurs="0" maxOccurs="1" />
+				<xs:element ref="wallet-id" minOccurs="0" maxOccurs="1" />
+				
 
 				<!-- for the POST response -->
 				<xs:element ref="wallet-token" minOccurs="0" maxOccurs="1" />
@@ -33,6 +38,12 @@
 				<xs:element ref="shipping-contact-info" minOccurs="0" maxOccurs="1" />
 			</xs:sequence>
 		</xs:complexType>
+	</xs:element>
+			
+	<xs:element name="call-id">
+		<xs:simpleType>
+			<xs:restriction base="xs:string" />
+		</xs:simpleType>
 	</xs:element>
 
 	<xs:element name="wallet-type">
@@ -58,5 +69,6 @@
 			<xs:restriction base="xs:string" />
 		</xs:simpleType>
 	</xs:element>
+
 
 </xs:schema>
