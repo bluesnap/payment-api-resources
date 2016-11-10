@@ -17,6 +17,8 @@
                 <xs:element ref="no-shipping" minOccurs="0" maxOccurs="1"/>
                 <xs:element ref="in-context" minOccurs="0" maxOccurs="1"/>                
                 <xs:element ref="recurring" minOccurs="0" maxOccurs="1"/>
+                <xs:element ref="max-amount" minOccurs="0" maxOccurs="1"/>
+                <xs:element ref="transaction-type" minOccurs="0" maxOccurs="1" />
 
 				<!-- for the response: -->
 				<xs:element ref="paypal-url" minOccurs="0" maxOccurs="1" />
@@ -33,6 +35,12 @@
 	<xs:element name="paypal-url">
 		<xs:simpleType>
 			<xs:restriction base="xs:string" />
+		</xs:simpleType>
+	</xs:element>
+	
+	<xs:element name="max-amount">
+		<xs:simpleType>
+			<xs:restriction base="xs:decimal" />
 		</xs:simpleType>
 	</xs:element>
 	
@@ -69,6 +77,16 @@
                     <xs:enumeration value="false" />
             </xs:restriction>
         </xs:simpleType>
+	</xs:element>
+	<xs:element name="transaction-type">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:enumeration value="AUTH_ONLY" />
+				<xs:enumeration value="CAPTURE" />
+				<xs:enumeration value="PAYPAL_ORDER" />
+				<xs:enumeration value="AUTH/CAPTURE" />
+			</xs:restriction>
+		</xs:simpleType>
 	</xs:element>
 		<xs:element name="paypal-subscription-id">
 		<xs:simpleType>

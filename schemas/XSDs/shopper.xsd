@@ -76,6 +76,7 @@
 				<xs:element ref="country" minOccurs="0" />
 				<xs:element ref="phone" minOccurs="0" />
 				<xs:element ref="fax" minOccurs="0" />
+				<xs:element ref="personal-identification-number" minOccurs="0" />
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>

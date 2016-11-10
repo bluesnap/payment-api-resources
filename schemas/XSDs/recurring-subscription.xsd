@@ -91,6 +91,7 @@
 				<xs:element ref="payer-info" minOccurs="0" />
 				<xs:element ref="payment-source" minOccurs="0" />
 				<xs:element ref="charge-info" minOccurs="0" />
+				<xs:element ref="refunds" minOccurs="0" />
 				<xs:element ref="processing-info" minOccurs="0" />
 			</xs:sequence>
 		</xs:complexType>

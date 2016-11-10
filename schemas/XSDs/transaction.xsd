@@ -9,6 +9,7 @@
     <xs:include schemaLocation="transaction-fraud-info.xsd"/>
     <xs:include schemaLocation="transaction-common.xsd"/>
 	<xs:include schemaLocation="transaction-meta-data.xsd"/>
+    <xs:include schemaLocation="refunds.xsd"/>
 	
     <xs:element name="card-transaction">
         <xs:complexType>
@@ -52,6 +53,7 @@
                 <!-- for response -->
                 <xs:element ref="processing-info" minOccurs="0" maxOccurs="1" />
                 <xs:element ref="fraud-result-info" minOccurs="0" maxOccurs="1" />
+                <xs:element ref="refunds" minOccurs="0" maxOccurs="1" />
  
            </xs:sequence>
         </xs:complexType>
@@ -72,7 +74,7 @@
                 <xs:element ref="city" minOccurs="0"  maxOccurs="1"/>               
                 <xs:element ref="zip" minOccurs="0" maxOccurs="1"/>
                 <xs:element ref="phone" minOccurs="0" maxOccurs="1"/>
-                    
+                <xs:element ref="personal-identification-number" minOccurs="0" maxOccurs="1"/>
              </xs:sequence>                    
         </xs:complexType>
     </xs:element>
