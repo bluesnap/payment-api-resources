@@ -3,11 +3,12 @@
 <xs:schema xmlns="http://ws.plimus.com" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:jaxb="http://java.sun.com/xml/ns/jaxb" jaxb:version="2.0"
     targetNamespace="http://ws.plimus.com">  
       
-    <xs:include schemaLocation="credit-card-info.xsd"/>                
+    <xs:include schemaLocation="credit-card-info.xsd"/>
+    <xs:include schemaLocation="transaction-common.xsd"/>
+    <xs:include schemaLocation="vendor-info.xsd"/>                 
     <xs:include schemaLocation="processing-info.xsd"/>
     <xs:include schemaLocation="price.xsd"/>    
     <xs:include schemaLocation="transaction-fraud-info.xsd"/>
-    <xs:include schemaLocation="transaction-common.xsd"/>
 	<xs:include schemaLocation="transaction-meta-data.xsd"/>
     <xs:include schemaLocation="refunds.xsd"/>
 	
@@ -16,7 +17,7 @@
             <xs:sequence>
             
                 <xs:element ref="card-transaction-type"/>
-                
+                <xs:element ref="vendor-info" minOccurs="0" maxOccurs="1"/>
                 <xs:element ref="merchant-transaction-id"  minOccurs="0" maxOccurs="1"/>
                 
                 <!-- BLS invoice id for response -->
@@ -63,7 +64,7 @@
     <xs:element name="card-holder-info">
         <xs:complexType>
             <xs:sequence>
-            
+            	<xs:element ref="merchant-shopper-id" minOccurs="0" maxOccurs="1"/>
                 <xs:element ref="first-name" minOccurs="1" maxOccurs="1"/>
                 <xs:element ref="last-name" minOccurs="1" maxOccurs="1"/>
                 <xs:element ref="email" minOccurs="0" maxOccurs="1"/>

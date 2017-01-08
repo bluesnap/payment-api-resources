@@ -13,6 +13,7 @@
 	<xs:include schemaLocation="subscription.xsd" />
 	<xs:include schemaLocation="plan.xsd" />
 	<xs:include schemaLocation="plans.xsd" />
+	<xs:include schemaLocation="vendor-info.xsd" />
 	<xs:element name="recurring-subscription">
 		<xs:complexType>
 			<xs:sequence>
@@ -22,6 +23,7 @@
 				<xs:element ref="status" minOccurs="0" />
 				<xs:element ref="quantity" minOccurs="0" />
 				<xs:element ref="soft-descriptor" minOccurs="0" />
+				<xs:element ref="vendor-info" minOccurs="0" maxOccurs="1" />
 				<xs:element ref="charge-frequency" minOccurs="0"
 					maxOccurs="1" />
 				<xs:element ref="trial-period-days" minOccurs="0"

@@ -13,6 +13,7 @@
 		<xs:complexType>
 			<xs:sequence>
 				<xs:element ref="vaulted-shopper-id" minOccurs="0" maxOccurs="1" />
+				<xs:element ref="merchant-shopper-id" minOccurs="0" maxOccurs="1"/>
 				<xs:element ref="first-name" minOccurs="1" />
 				<xs:element ref="last-name" minOccurs="1" />
 				<xs:element ref="email" minOccurs="0" />
@@ -24,6 +25,7 @@
 				<xs:element ref="zip" minOccurs="0" />
 				<xs:element ref="phone" minOccurs="0" />
 				<xs:element ref="personal-identification-number" minOccurs="0" maxOccurs="1"/>
+				<xs:element ref="soft-descriptor" minOccurs="0" maxOccurs="1"/>
 				<xs:element ref="shopper-currency" minOccurs="0" />	
 				<xs:element ref="wallet-id" minOccurs="0" />			
 				<xs:element ref="payment-sources" minOccurs="0" />
