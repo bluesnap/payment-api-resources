@@ -21,7 +21,7 @@
 	<!--========================================== ENCODING EXCLUSIONS =============================================-->
 	<!--============================================================================================================-->
 	
-	<!--<jaxb:bindings schemaLocation="order.xsd" node="/xs:schema">
+	<jaxb:bindings schemaLocation="order.xsd" node="/xs:schema">
 	    <jaxb:bindings node="xs:element[@name='cart-item']/xs:complexType/xs:sequence/xs:element[@ref='url']">    
 	        <annox:annotate target="field">
 	        	<annox:annotate annox:class="com.plimus.platform.security.xss.EncodingExcluded">
@@ -45,25 +45,7 @@
 	        </annox:annotate>
 	    </jaxb:bindings>
   	</jaxb:bindings>
-  	
-	<jaxb:bindings schemaLocation="shopper-subscriptions.xsd" node="/xs:schema">
-	    <jaxb:bindings node="xs:element[@name='subscriptions']/xs:complexType/xs:sequence/xs:element[@ref='url']">    
-	        <annox:annotate target="field">
-	        	<annox:annotate annox:class="com.plimus.platform.security.xss.EncodingExcluded">
-	        	</annox:annotate>
-	        </annox:annotate>
-	    </jaxb:bindings>
-  	</jaxb:bindings> 	
   
-  	<jaxb:bindings schemaLocation="order-history.xsd" node="/xs:schema">
-	    <jaxb:bindings node="xs:element[@name='past-orders']/xs:complexType/xs:sequence/xs:element[@ref='url']">    
-	        <annox:annotate target="field">
-	        	<annox:annotate annox:class="com.plimus.platform.security.xss.EncodingExcluded">
-	        	</annox:annotate>
-	        </annox:annotate>
-	    </jaxb:bindings>
-  	</jaxb:bindings>
-  	
   	<jaxb:bindings schemaLocation="subscription.xsd" node="/xs:schema">
 	    <jaxb:bindings node="xs:element[@name='subscription-charges']/xs:complexType/xs:sequence/xs:element[@ref='url']">    
 	        <annox:annotate target="field">
@@ -158,89 +140,8 @@
 	        </annox:annotate>
 	    </jaxb:bindings>
   	</jaxb:bindings> 	
-  	
-  <jaxb:bindings schemaLocation="shopping-context.xsd" node="/xs:schema">
-	    <jaxb:bindings node="//xs:element[@name='shopping-context']/xs:complexType/xs:sequence/xs:element[@ref='buynow-sso-token']"> 
-	        <annox:annotate target="field">
-	        	<annox:annotate annox:class="com.plimus.platform.security.xss.EncodingExcluded">
-	        	</annox:annotate>
-	        </annox:annotate>
-	    </jaxb:bindings>
-  	</jaxb:bindings>
-  	 	
-  <jaxb:bindings schemaLocation="product.xsd" node="/xs:schema">
-	    <jaxb:bindings node="//xs:element[@name='product-skus']/xs:complexType/xs:sequence/xs:element[@ref='url']"> 
-	        <annox:annotate target="field">
-	        	<annox:annotate annox:class="com.plimus.platform.security.xss.EncodingExcluded">
-	        	</annox:annotate>
-	        </annox:annotate>
-	    </jaxb:bindings>
-  	</jaxb:bindings>
-  	
-  <jaxb:bindings schemaLocation="product.xsd" node="/xs:schema">
-	    <jaxb:bindings node="//xs:element[@name='product']/xs:complexType/xs:sequence/xs:element[@ref='product-info-url']"> 
-	        <annox:annotate target="field">
-	        	<annox:annotate annox:class="com.plimus.platform.security.xss.EncodingExcluded">
-	        	</annox:annotate>
-	        </annox:annotate>
-	    </jaxb:bindings>
-  	</jaxb:bindings>
-  	
-  <jaxb:bindings schemaLocation="product.xsd" node="/xs:schema">
-	    <jaxb:bindings node="//xs:element[@name='product']/xs:complexType/xs:sequence/xs:element[@ref='product-image']"> 
-	        <annox:annotate target="field">
-	        	<annox:annotate annox:class="com.plimus.platform.security.xss.EncodingExcluded">
-	        	</annox:annotate>
-	        </annox:annotate>
-	    </jaxb:bindings>
-  	</jaxb:bindings>
-  	 	
-  <jaxb:bindings schemaLocation="catalog-sku.xsd" node="/xs:schema">
-	    <jaxb:bindings node="//xs:element[@name='buynow-url']/xs:complexType/xs:sequence/xs:element[@ref='url']"> 
-	        <annox:annotate target="field">
-	        	<annox:annotate annox:class="com.plimus.platform.security.xss.EncodingExcluded">
-	        	</annox:annotate>
-	        </annox:annotate>
-	    </jaxb:bindings>
-  	</jaxb:bindings>
-  	
-  <jaxb:bindings schemaLocation="catalog-sku.xsd" node="/xs:schema">
-	    <jaxb:bindings node="//xs:element[@name='catalog-sku']/xs:complexType/xs:sequence/xs:element[@ref='sku-image']"> 
-	        <annox:annotate target="field">
-	        	<annox:annotate annox:class="com.plimus.platform.security.xss.EncodingExcluded">
-	        	</annox:annotate>
-	        </annox:annotate>
-	    </jaxb:bindings>
-  	</jaxb:bindings>
-  	
-  <jaxb:bindings schemaLocation="catalog-sku.xsd" node="/xs:schema">
-	    <jaxb:bindings node="//xs:element[@name='sku-custom-parameter']/xs:complexType/xs:sequence/xs:element[@ref='url']"> 
-	        <annox:annotate target="field">
-	        	<annox:annotate annox:class="com.plimus.platform.security.xss.EncodingExcluded">
-	        	</annox:annotate>
-	        </annox:annotate>
-	    </jaxb:bindings>
-  	</jaxb:bindings>
-
-  <jaxb:bindings schemaLocation="catalog-sku.xsd" node="/xs:schema">
-		<jaxb:bindings node="//xs:element[@name='sku-ipn-destination']/xs:complexType/xs:sequence/xs:element[@ref='url']">
-			<annox:annotate target="field">
-				<annox:annotate annox:class="com.plimus.platform.security.xss.EncodingExcluded">
-				</annox:annotate>
-			</annox:annotate>
-		</jaxb:bindings>
-	</jaxb:bindings>
-  	 	
-  <jaxb:bindings schemaLocation="param-encryption.xsd" node="/xs:schema">
-	    <jaxb:bindings node="//xs:element[@name='param-encryption']/xs:complexType/xs:sequence/xs:element[@ref='encrypted-token']"> 
-	        <annox:annotate target="field">
-	        	<annox:annotate annox:class="com.plimus.platform.security.xss.EncodingExcluded">
-	        	</annox:annotate>
-	        </annox:annotate>
-	    </jaxb:bindings>
-  	</jaxb:bindings>
   	 	  
-    <jaxb:bindings schemaLocation="paypal-info.xsd" node="/xs:schema">
+ <!--  <jaxb:bindings schemaLocation="paypal-info.xsd" node="/xs:schema">
         <jaxb:bindings node="//xs:element[@name='paypal-info']/xs:complexType/xs:sequence/xs:element[@ref='url']">
             <annox:annotate target="field">
                 <annox:annotate annox:class="com.plimus.platform.security.xss.EncodingExcluded">
