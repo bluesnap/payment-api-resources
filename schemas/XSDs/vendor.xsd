@@ -143,6 +143,11 @@
 			<xs:restriction base="xs:string" />
 		</xs:simpleType>
 	</xs:element>
+	<xs:element name="minimal-payout-amount">
+		<xs:simpleType>
+			<xs:restriction base="xs:string" />
+		</xs:simpleType>
+	</xs:element>
 	<xs:element name="dob">
 		<xs:simpleType>
 			<xs:restriction base="xs:string" />
@@ -192,6 +197,7 @@
 			<xs:sequence>
 				<xs:element ref="payout-type" minOccurs="1" />
 				<xs:element ref="base-currency" minOccurs="0" />
+				<xs:element ref="minimal-payout-amount" minOccurs="0" />
 				<xs:element ref="name-on-account" minOccurs="0" />
 				<xs:element ref="bank-account-class" minOccurs="0" />
 				<xs:element ref="bank-account-type" minOccurs="0" />
