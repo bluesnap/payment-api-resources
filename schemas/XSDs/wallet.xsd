@@ -53,6 +53,7 @@
 			<xs:sequence>
 				<xs:element ref="encoded-payment-token" minOccurs="0"
 					maxOccurs="1" />
+				<xs:element ref="pf-token" minOccurs="0" maxOccurs="1" />
 				<xs:element ref="card-last-four-digits" minOccurs="0"
 					maxOccurs="1" />
 				<xs:element ref="card-type" minOccurs="0" maxOccurs="1" />
