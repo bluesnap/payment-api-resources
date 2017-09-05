@@ -25,6 +25,7 @@
 				<xs:element ref="quantity" minOccurs="0" />
 				<xs:element ref="soft-descriptor" minOccurs="0" />
 				<xs:element ref="vendor-info" minOccurs="0" maxOccurs="1" />
+				<xs:element ref="authorized-by-shopper" minOccurs="0" maxOccurs="1" />	
 				<xs:element ref="charge-frequency" minOccurs="0"
 					maxOccurs="1" />
 				<xs:element ref="trial-period-days" minOccurs="0"
@@ -62,6 +63,7 @@
 				<xs:element ref="credit-card-info" minOccurs="0"
 					maxOccurs="1" />
 				<xs:element ref="ecp-info" minOccurs="0" maxOccurs="1" />
+				<xs:element ref="sepa-direct-debit-info" minOccurs="0" maxOccurs="1" />
 				<xs:element ref="paypal-transaction" minOccurs="0"
 					maxOccurs="1" />
 				<xs:element ref="pf-token" minOccurs="0" maxOccurs="1" />

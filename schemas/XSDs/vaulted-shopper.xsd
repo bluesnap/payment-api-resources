@@ -43,6 +43,7 @@
 			<xs:sequence>
 				<xs:element ref="credit-card-info" minOccurs="0" maxOccurs="unbounded" />
 				<xs:element ref="ecp-info" minOccurs="0" maxOccurs="1" />			
+				<xs:element ref="sepa-direct-debit-info" minOccurs="0" maxOccurs="unbounded" />
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
@@ -54,6 +55,7 @@
 				<xs:element ref="credit-card" minOccurs="0" maxOccurs="1" />
 				<xs:element ref="ecp" minOccurs="0" maxOccurs="1" />	
 				<xs:element ref="wallet" minOccurs="0" maxOccurs="1" />			
+				<xs:element ref="sepa-direct-debit" minOccurs="0" maxOccurs="1" />			
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>

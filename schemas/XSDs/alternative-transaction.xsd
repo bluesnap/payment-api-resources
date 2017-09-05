@@ -12,7 +12,9 @@
 	<xs:include schemaLocation="transaction-meta-data.xsd" />
 	<xs:include schemaLocation="paypal-transaction.xsd" />
 	<xs:include schemaLocation="ecp-transaction.xsd" />
+	<xs:include schemaLocation="sepa-direct-debit-transaction.xsd" />
 	<xs:include schemaLocation="refunds.xsd"/>
+	<xs:include schemaLocation="subscription.xsd" />
 
 
 	<xs:element name="alt-transaction">
@@ -21,6 +23,7 @@
 				<xs:element ref="merchant-transaction-id" minOccurs="0"	maxOccurs="1" />
 				<!-- BLS invoice id for response -->
 				<xs:element ref="transaction-id" minOccurs="0" />
+				<xs:element ref="subscription-id" minOccurs="0" />
 				<xs:element ref="vendor-info" minOccurs="0" maxOccurs="1"/>
 				<xs:element ref="soft-descriptor" minOccurs="0"	maxOccurs="1" />
 				<xs:element ref="amount" minOccurs="1" maxOccurs="1" />
@@ -30,6 +33,7 @@
 				<xs:element ref="transaction-description" minOccurs="0" maxOccurs="1"/>
 				<xs:element ref="paypal-transaction" minOccurs="0" maxOccurs="1" />
 				<xs:element ref="ecp-transaction" minOccurs="0" maxOccurs="1" />
+				<xs:element ref="sepa-direct-debit-transaction" minOccurs="0" maxOccurs="1" />
 				<xs:element ref="transaction-meta-data" minOccurs="0" maxOccurs="1" />
 				<xs:element ref="transaction-fraud-info" minOccurs="0" maxOccurs="1" />
 				<xs:element ref="authorized-by-shopper" minOccurs="0" maxOccurs="1" />
