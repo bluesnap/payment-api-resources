@@ -28,6 +28,7 @@
                 <xs:element ref="recurring-transaction" minOccurs="1" maxOccurs="1"/>
                 
                 <xs:element ref="soft-descriptor" minOccurs="1" maxOccurs="1"/>
+                <xs:element ref="descriptor-phone-number" minOccurs="0" maxOccurs="1"/>
                 <xs:element ref="amount" minOccurs="1" maxOccurs="1"/>
                 <xs:element ref="currency" minOccurs="1" maxOccurs="1"/>
                 
