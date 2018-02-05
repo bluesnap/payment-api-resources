@@ -12,13 +12,18 @@
 	<xs:include schemaLocation="transaction-meta-data.xsd"/>
     <xs:include schemaLocation="refunds.xsd"/>
     <xs:include schemaLocation="wallet.xsd"/>
+    <xs:include schemaLocation="chargebacks.xsd"/>
 	
     <xs:element name="card-transaction">
         <xs:complexType>
             <xs:sequence>
             
                 <xs:element ref="card-transaction-type"/>
+                
                 <xs:element ref="vendor-info" minOccurs="0" maxOccurs="1"/>
+                
+                <xs:element ref="vendors-info" minOccurs="0" maxOccurs="1"/>
+                
                 <xs:element ref="merchant-transaction-id"  minOccurs="0" maxOccurs="1"/>
                 
                 <!-- BLS invoice id for response -->
@@ -58,6 +63,7 @@
                 <!-- for response -->
                 <xs:element ref="processing-info" minOccurs="0" maxOccurs="1" />
                 <xs:element ref="fraud-result-info" minOccurs="0" maxOccurs="1" />
+                <xs:element ref="chargebacks" minOccurs="0" maxOccurs="1" />
                 <xs:element ref="refunds" minOccurs="0" maxOccurs="1" />
  
            </xs:sequence>

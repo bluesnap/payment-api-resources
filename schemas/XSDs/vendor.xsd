@@ -199,6 +199,7 @@
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
+	
 	<xs:element name="verification">
 		<xs:complexType>
 			<xs:sequence>

@@ -15,6 +15,7 @@
 	<xs:include schemaLocation="sepa-direct-debit-transaction.xsd" />
 	<xs:include schemaLocation="refunds.xsd"/>
 	<xs:include schemaLocation="subscription.xsd" />
+	<xs:include schemaLocation="chargebacks.xsd"/>
 
 
 	<xs:element name="alt-transaction">
@@ -25,6 +26,7 @@
 				<xs:element ref="transaction-id" minOccurs="0" />
 				<xs:element ref="subscription-id" minOccurs="0" />
 				<xs:element ref="vendor-info" minOccurs="0" maxOccurs="1"/>
+				<xs:element ref="vendors-info" minOccurs="0" maxOccurs="1"/>
 				<xs:element ref="soft-descriptor" minOccurs="0"	maxOccurs="1" />
 				<xs:element ref="amount" minOccurs="1" maxOccurs="1" />
 				<xs:element ref="currency" minOccurs="1" maxOccurs="1" />
@@ -41,6 +43,7 @@
 				<!-- for response -->
 				<xs:element ref="processing-info" minOccurs="0" maxOccurs="1" />
 				<xs:element ref="fraud-result-info" minOccurs="0" maxOccurs="1" />
+				<xs:element ref="chargebacks" minOccurs="0" maxOccurs="1" />
 				<xs:element ref="refunds" minOccurs="0" maxOccurs="1" />
 			</xs:sequence>
 		</xs:complexType>
