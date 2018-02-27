@@ -12,7 +12,9 @@
 	<xs:include schemaLocation="transaction-meta-data.xsd"/>
     <xs:include schemaLocation="refunds.xsd"/>
     <xs:include schemaLocation="wallet.xsd"/>
+    <xs:include schemaLocation="level-3-data.xsd" />
     <xs:include schemaLocation="chargebacks.xsd"/>
+    <xs:include schemaLocation="three-d-secure.xsd"/>
 	
     <xs:element name="card-transaction">
         <xs:complexType>
@@ -58,8 +60,9 @@
                 <xs:element ref="wallet" minOccurs="0" maxOccurs="1" />
                 
                 <xs:element ref="transaction-meta-data" minOccurs="0" maxOccurs="1"/>
-                
-                
+                <xs:element ref="three-d-secure" minOccurs="0" maxOccurs="1"/>
+                <xs:element ref="level-3-data" minOccurs="0" maxOccurs="1" />
+
                 <!-- for response -->
                 <xs:element ref="processing-info" minOccurs="0" maxOccurs="1" />
                 <xs:element ref="fraud-result-info" minOccurs="0" maxOccurs="1" />

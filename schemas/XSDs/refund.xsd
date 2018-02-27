@@ -7,6 +7,7 @@
     <xs:element name="refund">
         <xs:complexType>
             <xs:sequence>
+                <xs:element ref="refund-transaction-id" minOccurs="1" maxOccurs="1"/>
                 <xs:element ref="amount"/>
                 <xs:element ref="vendor-amount" minOccurs="0" maxOccurs="1"/>
                 <xs:element ref="vendors-refund-info" minOccurs="0" maxOccurs="1"/>
@@ -14,6 +15,11 @@
                 <xs:element ref="date"/>
             </xs:sequence>
         </xs:complexType>
+    </xs:element>
+    <xs:element name="refund-transaction-id">
+        <xs:simpleType>
+            <xs:restriction base="xs:long" />
+        </xs:simpleType>
     </xs:element>
     <xs:element name="date">
         <xs:simpleType>

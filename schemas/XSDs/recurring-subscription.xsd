@@ -15,6 +15,7 @@
 	<xs:include schemaLocation="plans.xsd" />
 	<xs:include schemaLocation="vendor-info.xsd" />
 	<xs:include schemaLocation="wallet.xsd" />
+	<xs:include schemaLocation="level-3-data.xsd" />
 	<xs:element name="recurring-subscription">
 		<xs:complexType>
 			<xs:sequence>
@@ -55,6 +56,8 @@
 				<xs:element ref="fraud-result-info" minOccurs="0"
 					maxOccurs="1" />
 				<xs:element ref="transaction-fraud-info" minOccurs="0"
+					maxOccurs="1" />
+				<xs:element ref="level-3-data" minOccurs="0"
 					maxOccurs="1" />
 			</xs:sequence>
 		</xs:complexType>
@@ -111,6 +114,8 @@
 					maxOccurs="1" />
 				<xs:element ref="processing-info" minOccurs="0" />
 				<xs:element ref="transaction-fraud-info" minOccurs="0"
+					maxOccurs="1" />
+				<xs:element ref="level-3-data" minOccurs="0"
 					maxOccurs="1" />
 			</xs:sequence>
 		</xs:complexType>

@@ -6,10 +6,16 @@
     <xs:element name="chargeback">
         <xs:complexType>
             <xs:sequence>
+                <xs:element ref="chargeback-transaction-id" minOccurs="1" maxOccurs="1"/>
                 <xs:element ref="amount"/>
                 <xs:element ref="currency"/>
                 <xs:element ref="date"/>
             </xs:sequence>
         </xs:complexType>
+    </xs:element>
+    <xs:element name="chargeback-transaction-id">
+        <xs:simpleType>
+            <xs:restriction base="xs:long" />
+        </xs:simpleType>
     </xs:element>
 </xs:schema>
