@@ -13,6 +13,8 @@
 				<xs:element ref="account-number" />
 				<xs:element ref="routing-number" />
 				<xs:element ref="account-type" />
+				<xs:element ref="public-account-number" />
+				<xs:element ref="public-routing-number" />
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>

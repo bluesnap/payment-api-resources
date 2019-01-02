@@ -32,11 +32,13 @@
                 <xs:element ref="transaction-id" minOccurs="0"/>
                 
                 <!-- is this a recurring transaction: ECOMMERCE/RECURRING -->
-                <xs:element ref="recurring-transaction" minOccurs="1" maxOccurs="1"/>
+                <xs:element ref="recurring-transaction" minOccurs="0" maxOccurs="1"/>
                 
                 <xs:element ref="soft-descriptor" minOccurs="1" maxOccurs="1"/>
                 <xs:element ref="descriptor-phone-number" minOccurs="0" maxOccurs="1"/>
                 <xs:element ref="amount" minOccurs="1" maxOccurs="1"/>
+                <xs:element ref="usd-amount" minOccurs="1" maxOccurs="1"/>
+                <xs:element ref="open-to-capture" minOccurs="1" maxOccurs="1"/>
                 <xs:element ref="currency" minOccurs="1" maxOccurs="1"/>
                 
                 <xs:element ref="avs-response-code"  minOccurs="0" maxOccurs="1"/>
@@ -62,6 +64,9 @@
                 <xs:element ref="transaction-meta-data" minOccurs="0" maxOccurs="1"/>
                 <xs:element ref="three-d-secure" minOccurs="0" maxOccurs="1"/>
                 <xs:element ref="level-3-data" minOccurs="0" maxOccurs="1" />
+                
+                <xs:element ref="transaction-initiator" minOccurs="0" maxOccurs="1"/>
+                <xs:element ref="store-card" minOccurs="0" maxOccurs="1"/>
 
                 <!-- for response -->
                 <xs:element ref="processing-info" minOccurs="0" maxOccurs="1" />

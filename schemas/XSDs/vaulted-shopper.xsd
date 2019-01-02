@@ -35,6 +35,7 @@
 				<xs:element ref="transaction-fraud-info" minOccurs="0" />
 				<xs:element ref="fraud-result-info" minOccurs="0" maxOccurs="1" />
 				<xs:element ref="last-payment-info" minOccurs="0" maxOccurs="1" />
+				<xs:element ref="chosen-payment-method" minOccurs="0" maxOccurs="1" />
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
@@ -45,6 +46,7 @@
 				<xs:element ref="credit-card-info" minOccurs="0" maxOccurs="unbounded" />
 				<xs:element ref="ecp-info" minOccurs="0" maxOccurs="1" />			
 				<xs:element ref="sepa-direct-debit-info" minOccurs="0" maxOccurs="unbounded" />
+				<xs:element ref="ecp-details" minOccurs="0" maxOccurs="unbounded" />
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
