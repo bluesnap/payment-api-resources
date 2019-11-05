@@ -14,7 +14,6 @@
                 <xs:element name="additional-info" form="qualified">
                     <xs:complexType>
                         <xs:sequence>
-                        	<xs:element ref="seller-order-id" minOccurs="0"/>
                             <xs:element ref="processing-info"/>
                             <xs:element name="three-d-secure" type="xs:boolean" form="qualified"/>
                             <xs:element ref="kount-info"/>

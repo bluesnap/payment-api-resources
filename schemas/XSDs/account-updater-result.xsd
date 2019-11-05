@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<xs:schema xmlns="http://ws.plimus.com" 
+						 xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+						 xmlns:jaxb="http://java.sun.com/xml/ns/jaxb" 
+					   jaxb:version="2.0"
+						 targetNamespace="http://ws.plimus.com">
+
+	<xs:include schemaLocation="order.xsd"/>
+	<xs:include schemaLocation="credit-card-info.xsd"/>
+
+	<xs:element name="account-updater-result">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="status"/>
+				<xs:element ref="au-result-per-provider" minOccurs="1" maxOccurs="unbounded" />
+			</xs:sequence> 
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="au-result-per-provider">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="provider-name"/>
+				<xs:element ref="amount-sent-for-update"/>
+				<xs:element ref="au-result-per-card-type" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="au-result-per-card-type">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="amount-sent-for-update"/>
+				<xs:element ref="card-type"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="provider-name">
+		<xs:simpleType>
+			<xs:restriction base="xs:string" />
+		</xs:simpleType>
+	</xs:element>
+
+	<xs:element name="amount-sent-for-update">
+		<xs:simpleType>
+			<xs:restriction base="xs:int" />
+		</xs:simpleType>
+	</xs:element>
+
+
+</xs:schema>
+
+
