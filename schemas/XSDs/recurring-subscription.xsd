@@ -27,6 +27,7 @@
 				<xs:element ref="soft-descriptor" minOccurs="0" />
 				<xs:element ref="descriptor-phone-number" minOccurs="0" maxOccurs="1" />
 				<xs:element ref="vendor-info" minOccurs="0" maxOccurs="1" />
+				<xs:element ref="vendors-info" minOccurs="0" maxOccurs="1" />
 				<xs:element ref="authorized-by-shopper" minOccurs="0"
 					maxOccurs="1" />
 				<xs:element ref="charge-frequency" minOccurs="0"
@@ -123,6 +124,7 @@
 				<xs:element ref="three-d-secure" minOccurs="0" maxOccurs="1"/>
 				<xs:element ref="scheduled" minOccurs="0" maxOccurs="1"/>
 				<xs:element ref="vendor-info" minOccurs="0" maxOccurs="1" />
+				<xs:element ref="vendors-info" minOccurs="0" maxOccurs="1" />
 				<xs:element ref="fraud-result-info" minOccurs="0" maxOccurs="1" />
 				<xs:element ref="transaction-order-source" minOccurs="0" maxOccurs="1"/>
 			</xs:sequence>
