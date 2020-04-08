@@ -89,7 +89,7 @@
 				<xs:element ref="cryptogram" minOccurs="0" maxOccurs="1" />
 				<xs:element ref="eci-indicator" minOccurs="0" maxOccurs="1" />
 				<xs:element ref="wallet-transaction-id" minOccurs="0" maxOccurs="1" />
-				
+
 				<!-- For Input and Output: -->
 				<xs:element ref="dpan-expiration-month" minOccurs="0" maxOccurs="1" />
 				<xs:element ref="dpan-expiration-year" minOccurs="0" maxOccurs="1" />
