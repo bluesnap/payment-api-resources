@@ -17,8 +17,6 @@
 	<xs:include schemaLocation="refunds.xsd"/>
 	<xs:include schemaLocation="subscription.xsd" />
 	<xs:include schemaLocation="chargebacks.xsd"/>
-	<xs:include schemaLocation="local-bank-transfer-transaction.xsd"/>
-
 
 
 	<xs:element name="alt-transaction">
@@ -42,11 +40,8 @@
 				<xs:element ref="transaction-meta-data" minOccurs="0" maxOccurs="1" />
 				<xs:element ref="transaction-fraud-info" minOccurs="0" maxOccurs="1" />
 				<xs:element ref="authorized-by-shopper" minOccurs="0" maxOccurs="1" />
-				<xs:element ref="local-bank-transfer-transaction" minOccurs="0" maxOccurs="1" />
 				
 				<!-- for response -->
-				<xs:element ref="transaction-approval-date" minOccurs="0" maxOccurs="1" />
-				<xs:element ref="transaction-approval-time" minOccurs="0" maxOccurs="1" />
 				<xs:element ref="alipay-transaction" minOccurs="0" maxOccurs="1" />
 				<xs:element ref="processing-info" minOccurs="0" maxOccurs="1" />
 				<xs:element ref="fraud-result-info" minOccurs="0" maxOccurs="1" />
