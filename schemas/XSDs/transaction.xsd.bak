@@ -16,7 +16,7 @@
     <xs:include schemaLocation="chargebacks.xsd"/>
     <xs:include schemaLocation="three-d-secure.xsd"/>
     <xs:include schemaLocation="network-transaction-info.xsd"/>
-	
+
     <xs:element name="card-transaction">
         <xs:complexType>
             <xs:sequence>
@@ -45,6 +45,9 @@
                 <xs:element ref="avs-response-code"  minOccurs="0" maxOccurs="1"/>
                 
                 <!-- required for request, omitted in response -->
+				<xs:element ref="transaction-approval-date" minOccurs="0" maxOccurs="1" />
+				<xs:element ref="transaction-approval-time" minOccurs="0" maxOccurs="1" />
+
                 <xs:element ref="card-holder-info" minOccurs="0" maxOccurs="1"/>
                 
                 <xs:element ref="vaulted-shopper-id" minOccurs="0" maxOccurs="1"/>

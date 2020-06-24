@@ -76,6 +76,7 @@
                 <xs:element ref="transaction-order-source" minOccurs="0" maxOccurs="1"/>
 
                 <!-- for response -->
+                <xs:element ref="processing-fees" minOccurs="0" maxOccurs="1" />
                 <xs:element ref="processing-info" minOccurs="0" maxOccurs="1" />
                 <xs:element ref="fraud-result-info" minOccurs="0" maxOccurs="1" />
                 <xs:element ref="chargebacks" minOccurs="0" maxOccurs="1" />
@@ -85,6 +86,15 @@
         </xs:complexType>
     </xs:element>
  
+    <xs:element name="processing-fees">
+        <xs:complexType>
+            <xs:sequence>
+            	<xs:element ref="processing-fees-total" minOccurs="1" maxOccurs="1"/>
+                <xs:element ref="processing-fees-percentage" minOccurs="1" maxOccurs="1"/>
+                <xs:element ref="processing-fees-fixed" minOccurs="1" maxOccurs="1"/>
+             </xs:sequence>                    
+        </xs:complexType>
+    </xs:element>
      
     <xs:element name="card-holder-info">
         <xs:complexType>
@@ -101,6 +111,7 @@
                 <xs:element ref="zip" minOccurs="0" maxOccurs="1"/>
                 <xs:element ref="phone" minOccurs="0" maxOccurs="1"/>
                 <xs:element ref="personal-identification-number" minOccurs="0" maxOccurs="1"/>
+				<xs:element ref="company-name" minOccurs="0" maxOccurs="1"/>
              </xs:sequence>                    
         </xs:complexType>
     </xs:element>
@@ -128,5 +139,24 @@
             <xs:restriction base="xs:string" />
         </xs:simpleType>
     </xs:element>
+
+	<xs:element name="processing-fees-total">
+		<xs:simpleType>
+			<xs:restriction base="xs:decimal"/>
+		</xs:simpleType>
+	</xs:element>
+
+	<xs:element name="processing-fees-percentage">
+		<xs:simpleType>
+			<xs:restriction base="xs:decimal"/>
+		</xs:simpleType>
+	</xs:element>
+
+	<xs:element name="processing-fees-fixed">
+		<xs:simpleType>
+			<xs:restriction base="xs:decimal"/>
+		</xs:simpleType>
+	</xs:element>
+
     
 </xs:schema>

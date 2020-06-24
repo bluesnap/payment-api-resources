@@ -42,6 +42,7 @@
 				<xs:element ref="transaction-meta-data" minOccurs="0" maxOccurs="1" />
 				<xs:element ref="transaction-fraud-info" minOccurs="0" maxOccurs="1" />
 				<xs:element ref="authorized-by-shopper" minOccurs="0" maxOccurs="1" />
+				<xs:element ref="pf-token" minOccurs="0" maxOccurs="1" />
 				<xs:element ref="local-bank-transfer-transaction" minOccurs="0" maxOccurs="1" />
 				
 				<!-- for response -->
