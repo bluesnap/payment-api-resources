@@ -11,6 +11,7 @@
                 <xs:element ref="amount"/>
                 <xs:element ref="vendor-amount" minOccurs="0" maxOccurs="1"/>
                 <xs:element ref="vendors-refund-info" minOccurs="0" maxOccurs="1"/>
+                <xs:element ref="tax-amount" minOccurs="0" maxOccurs="1"/>
                 <xs:element ref="currency"/>
                 <xs:element ref="date"/>
             </xs:sequence>

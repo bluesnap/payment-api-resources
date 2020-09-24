@@ -76,13 +76,15 @@
                 <xs:element ref="store-card" minOccurs="0" maxOccurs="1"/>
                 <xs:element ref="transaction-order-source" minOccurs="0" maxOccurs="1"/>
 
+                <xs:element ref="tax-reference" minOccurs="0" maxOccurs="1"/>
+
                 <!-- for response -->
                 <xs:element ref="processing-fees" minOccurs="0" maxOccurs="1" />
                 <xs:element ref="processing-info" minOccurs="0" maxOccurs="1" />
                 <xs:element ref="fraud-result-info" minOccurs="0" maxOccurs="1" />
                 <xs:element ref="chargebacks" minOccurs="0" maxOccurs="1" />
                 <xs:element ref="refunds" minOccurs="0" maxOccurs="1" />
- 
+
            </xs:sequence>
         </xs:complexType>
     </xs:element>
