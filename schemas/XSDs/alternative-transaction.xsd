@@ -19,6 +19,8 @@
 	<xs:include schemaLocation="chargebacks.xsd"/>
 	<xs:include schemaLocation="local-bank-transfer-transaction.xsd"/>
 	<xs:include schemaLocation="ideal-transaction.xsd" />
+	<xs:include schemaLocation="sofort-transaction.xsd" />
+
 
 
 	<xs:element name="alt-transaction">
@@ -38,6 +40,7 @@
 				<xs:element ref="transaction-description" minOccurs="0" maxOccurs="1"/>
 				<xs:element ref="paypal-transaction" minOccurs="0" maxOccurs="1" />
 				<xs:element ref="ideal-transaction" minOccurs="0" maxOccurs="1" />
+				<xs:element ref="sofort-transaction" minOccurs="0" maxOccurs="1" />
 				<xs:element ref="ecp-transaction" minOccurs="0" maxOccurs="1" />
 				<xs:element ref="sepa-direct-debit-transaction" minOccurs="0" maxOccurs="1" />
 				<xs:element ref="transaction-meta-data" minOccurs="0" maxOccurs="1" />

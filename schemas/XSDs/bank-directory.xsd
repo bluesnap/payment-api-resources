@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://ws.plimus.com" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:jaxb="http://java.sun.com/xml/ns/jaxb" jaxb:version="2.0"
+	targetNamespace="http://ws.plimus.com">
+
+	<xs:include schemaLocation="vendor.xsd"/>
+
+	<xs:element name="bank-directory">
+		<xs:complexType>
+			<xs:sequence>
+				<!-- for response -->
+				<xs:element ref="currency-code" minOccurs="1" maxOccurs="1" />
+				<xs:element ref="country-code" minOccurs="1" maxOccurs="1" />
+				<xs:element ref="payment-method-name" minOccurs="1" maxOccurs="1" />
+				
+				<!-- for response -->
+				<xs:element ref="issuers-info" minOccurs="0" maxOccurs="unbounded" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="issuers-info">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="issuer-id" minOccurs="1" maxOccurs="1"/>
+				<xs:element ref="issuer-name" minOccurs="1" maxOccurs="1" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="country-code">
+		<xs:simpleType>
+			<xs:restriction base="xs:string" />
+		</xs:simpleType>
+	</xs:element>
+
+	<xs:element name="issuer-name">
+		<xs:simpleType>
+			<xs:restriction base="xs:string" />
+		</xs:simpleType>
+	</xs:element>
+
+	<xs:element name="payment-method-name">
+		<xs:simpleType>
+			<xs:restriction base="xs:string" />
+		</xs:simpleType>
+	</xs:element>
+
+	<xs:element name="issuer-id">
+		<xs:simpleType>
+			<xs:restriction base="xs:string" />
+		</xs:simpleType>
+	</xs:element>
+	
+</xs:schema>

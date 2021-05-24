@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://ws.plimus.com" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:jaxb="http://java.sun.com/xml/ns/jaxb" jaxb:version="2.0"
+	targetNamespace="http://ws.plimus.com">
+	<xs:include schemaLocation="local-bank-transfer-info.xsd"/>
+	
+	<xs:element name="local-bank-transfer-transaction">
+		<xs:complexType>
+			<xs:sequence>
+				<!-- for the response: -->
+				<xs:element ref="local-bank-transfer-info" minOccurs="0" maxOccurs="1" />
+				<xs:element ref="order-id" minOccurs="0" maxOccurs="1" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+</xs:schema>
