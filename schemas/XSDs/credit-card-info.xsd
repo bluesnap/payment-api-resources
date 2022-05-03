@@ -59,6 +59,7 @@
 				<xs:element ref="card-fingerprint" minOccurs="0"/>
 				<xs:element ref="issuing-country-code" minOccurs="0"/>
 				<xs:element ref="par" minOccurs="0"/>
+				<xs:element ref="arn" minOccurs="0"/>
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
@@ -168,6 +169,11 @@
 		</xs:simpleType>
 	</xs:element>
 	<xs:element name="pf-token">
+		<xs:simpleType>
+			<xs:restriction base="xs:string" />
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="arn">
 		<xs:simpleType>
 			<xs:restriction base="xs:string" />
 		</xs:simpleType>

@@ -4,6 +4,8 @@
 	targetNamespace="http://ws.plimus.com">
     <xs:include schemaLocation="price.xsd" />
     <xs:include schemaLocation="vendor-refund-info.xsd"/>
+    <xs:include schemaLocation="transaction-meta-data.xsd"/>
+    <xs:include schemaLocation="level-3-data.xsd"/>
     <xs:element name="refund">
         <xs:complexType>
             <xs:sequence>
@@ -14,19 +16,26 @@
                 <xs:element ref="tax-amount" minOccurs="0" maxOccurs="1"/>
                 <xs:element ref="currency"/>
                 <xs:element ref="date"/>
+                <xs:element ref="transaction-meta-data" minOccurs="0" maxOccurs="1"/>
+                <xs:element ref="reason" minOccurs="0" maxOccurs="1"/>
+                <xs:element ref="cancel-subscriptions" minOccurs="0" maxOccurs="1"/>
+                <xs:element ref="level-3-data" minOccurs="0" maxOccurs="1" />
             </xs:sequence>
         </xs:complexType>
     </xs:element>
+
     <xs:element name="refund-transaction-id">
         <xs:simpleType>
             <xs:restriction base="xs:long" />
         </xs:simpleType>
     </xs:element>
+
     <xs:element name="date">
         <xs:simpleType>
             <xs:restriction base="xs:string"/>
         </xs:simpleType>
     </xs:element>
+
     <xs:element name="vendors-refund-info">
         <xs:complexType>
             <xs:sequence>
@@ -34,4 +43,18 @@
             </xs:sequence>
         </xs:complexType>
     </xs:element>
+
+    <xs:element name="reason">
+        <xs:simpleType>
+            <xs:restriction base="xs:string" />
+        </xs:simpleType>
+    </xs:element>
+
+    <xs:element name="cancel-subscriptions">
+        <xs:simpleType>
+            <xs:restriction base="xs:boolean" />
+        </xs:simpleType>
+    </xs:element>
+
+
 </xs:schema>

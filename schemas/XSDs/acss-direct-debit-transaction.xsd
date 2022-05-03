@@ -5,8 +5,9 @@
 	targetNamespace="http://ws.plimus.com">
 	<xs:include schemaLocation="order.xsd" />
 	<xs:include schemaLocation="common-account.xsd"/>
+	<xs:include schemaLocation="debit-agreement.xsd"/>
 
-	<xs:element name="ecp-transaction">
+	<xs:element name="acss-direct-debit-transaction">
 		<xs:complexType>
 			<xs:sequence>
 				<xs:element ref="account-number" />
@@ -14,6 +15,7 @@
 				<xs:element ref="account-type" />
 				<xs:element ref="public-account-number" />
 				<xs:element ref="public-routing-number" />
+				<xs:element ref="agreement-id" minOccurs="0" maxOccurs="1" />
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>

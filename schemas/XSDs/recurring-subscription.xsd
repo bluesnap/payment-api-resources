@@ -15,6 +15,7 @@
 	<xs:include schemaLocation="plans.xsd" />
 	<xs:include schemaLocation="vendor-info.xsd" />
 	<xs:include schemaLocation="wallet.xsd" />
+	<xs:include schemaLocation="transaction-meta-data.xsd" />
 	<xs:include schemaLocation="level-3-data.xsd" />
 	<xs:element name="recurring-subscription">
 		<xs:complexType>
@@ -28,40 +29,32 @@
 				<xs:element ref="descriptor-phone-number" minOccurs="0" maxOccurs="1" />
 				<xs:element ref="vendor-info" minOccurs="0" maxOccurs="1" />
 				<xs:element ref="vendors-info" minOccurs="0" maxOccurs="1" />
-				<xs:element ref="authorized-by-shopper" minOccurs="0"
-					maxOccurs="1" />
-				<xs:element ref="charge-frequency" minOccurs="0"
-					maxOccurs="1" />
-				<xs:element ref="trial-period-days" minOccurs="0"
-					maxOccurs="1" />
-				<xs:element ref="subscription-currency" minOccurs="0"
-							maxOccurs="1" />
-				<xs:element ref="recurring-charge-amount" minOccurs="0"
-							maxOccurs="1" />
-				<xs:element ref="override-recurring-charge-amount"
-							minOccurs="0" maxOccurs="1" />
+				<xs:element ref="authorized-by-shopper" minOccurs="0" maxOccurs="1" />
+				<xs:element ref="charge-frequency" minOccurs="0" maxOccurs="1" />
+				<xs:element ref="trial-period-days" minOccurs="0" maxOccurs="1" />
+				<xs:element ref="subscription-currency" minOccurs="0" maxOccurs="1" />
+				<xs:element ref="recurring-charge-amount" minOccurs="0" maxOccurs="1" />
+				<xs:element ref="override-recurring-charge-amount" minOccurs="0" maxOccurs="1" />
 				<xs:element ref="currency" minOccurs="0" maxOccurs="1" />
-				<xs:element ref="initial-charge-amount" minOccurs="0"
-							maxOccurs="1" />
+				<xs:element ref="initial-charge-amount" minOccurs="0" maxOccurs="1" />
 				<xs:element ref="auto-renew" minOccurs="0" maxOccurs="1" />
-				<xs:element ref="next-charge-date" minOccurs="0"
-							maxOccurs="1" />
-				<xs:element ref="override-initial-charge-amount"
-							minOccurs="0" maxOccurs="1" />
-				<xs:element ref="override-trial-period-days" minOccurs="0"
-							maxOccurs="1" />
+				<xs:element ref="next-charge-date" minOccurs="0" maxOccurs="1" />
+				<xs:element ref="override-initial-charge-amount" minOccurs="0" maxOccurs="1" />
+				<xs:element ref="override-trial-period-days" minOccurs="0" maxOccurs="1" />
 				<xs:element ref="payer-info" minOccurs="0" />
 				<xs:element ref="payment-source" minOccurs="0" />
 				<xs:element ref="charge" minOccurs="0" maxOccurs="1"/>
-				<xs:element ref="fraud-result-info" minOccurs="0"
-							maxOccurs="1" />
-				<xs:element ref="transaction-fraud-info" minOccurs="0"
-							maxOccurs="1" />
-				<xs:element ref="level-3-data" minOccurs="0"
-							maxOccurs="1" />
+				<xs:element ref="fraud-result-info" minOccurs="0" maxOccurs="1" />
+				<xs:element ref="transaction-fraud-info" minOccurs="0" maxOccurs="1" />
+				<xs:element ref="level-3-data" minOccurs="0" maxOccurs="1" />
 				<xs:element ref="three-d-secure" minOccurs="0" maxOccurs="1"/>
 				<xs:element ref="scheduled" minOccurs="0" maxOccurs="1"/>
 				<xs:element ref="transaction-order-source" minOccurs="0" maxOccurs="1"/>
+				<xs:element ref="initial-tax-reference" minOccurs="0" maxOccurs="1"/>
+				<xs:element ref="recurring-tax-reference" minOccurs="0" maxOccurs="1"/>
+				<xs:element ref="transaction-meta-data" minOccurs="0" maxOccurs="1" />
+				<xs:element ref="network-transaction-info" minOccurs="0" maxOccurs="1" />
+				<xs:element ref="transaction-initiator" minOccurs="0" maxOccurs="1"/>
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
@@ -69,13 +62,12 @@
 		<xs:complexType>
 			<xs:sequence>
 				<xs:element ref="wallet" minOccurs="0" maxOccurs="1" />
-				<xs:element ref="credit-card-info" minOccurs="0"
-							maxOccurs="1" />
+				<xs:element ref="credit-card-info" minOccurs="0" maxOccurs="1" />
 				<xs:element ref="ecp-info" minOccurs="0" maxOccurs="1" />
-				<xs:element ref="sepa-direct-debit-info" minOccurs="0"
-							maxOccurs="1" />
-				<xs:element ref="paypal-transaction" minOccurs="0"
-							maxOccurs="1" />
+				<xs:element ref="sepa-direct-debit-info" minOccurs="0" maxOccurs="1" />
+				<xs:element ref="becs-direct-debit-info" minOccurs="0" maxOccurs="1" />
+				<xs:element ref="acss-direct-debit-info" minOccurs="0" maxOccurs="1" />
+				<xs:element ref="paypal-transaction" minOccurs="0" maxOccurs="1" />
 				<xs:element ref="pf-token" minOccurs="0" maxOccurs="1" />
 			</xs:sequence>
 		</xs:complexType>
@@ -108,25 +100,25 @@
 				<xs:element ref="amount" minOccurs="0" />
 				<xs:element ref="currency" minOccurs="0" />
 				<xs:element ref="soft-descriptor" minOccurs="0" />
-				<xs:element ref="descriptor-phone-number" minOccurs="0"
-							maxOccurs="1" />
+				<xs:element ref="descriptor-phone-number" minOccurs="0" maxOccurs="1" />
 				<xs:element ref="payer-info" minOccurs="0" />
 				<xs:element ref="payment-source" minOccurs="0" />
 				<xs:element ref="charge-info" minOccurs="0" />
 				<xs:element ref="refunds" minOccurs="0" />
-				<xs:element ref="authorized-by-shopper" minOccurs="0"
-							maxOccurs="1" />
+				<xs:element ref="authorized-by-shopper" minOccurs="0" maxOccurs="1" />
 				<xs:element ref="processing-info" minOccurs="0" />
-				<xs:element ref="transaction-fraud-info" minOccurs="0"
-							maxOccurs="1" />
-				<xs:element ref="level-3-data" minOccurs="0"
-							maxOccurs="1" />
+				<xs:element ref="transaction-fraud-info" minOccurs="0" maxOccurs="1" />
+				<xs:element ref="level-3-data" minOccurs="0" maxOccurs="1" />
 				<xs:element ref="three-d-secure" minOccurs="0" maxOccurs="1"/>
 				<xs:element ref="scheduled" minOccurs="0" maxOccurs="1"/>
 				<xs:element ref="vendor-info" minOccurs="0" maxOccurs="1" />
 				<xs:element ref="vendors-info" minOccurs="0" maxOccurs="1" />
 				<xs:element ref="fraud-result-info" minOccurs="0" maxOccurs="1" />
 				<xs:element ref="transaction-order-source" minOccurs="0" maxOccurs="1"/>
+				<xs:element ref="transaction-meta-data" minOccurs="0" maxOccurs="1" />
+				<xs:element ref="tax-reference" minOccurs="0" maxOccurs="1"/>
+                <xs:element ref="network-transaction-info" minOccurs="0" maxOccurs="1" />
+				<xs:element ref="transaction-initiator" minOccurs="0" maxOccurs="1"/>
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
