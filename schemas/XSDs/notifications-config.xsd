@@ -18,20 +18,19 @@
 		<xs:complexType>
 			<xs:sequence>
 				<xs:element ref="ipn-url" minOccurs="1" maxOccurs="1" />
-				<xs:element ref="default-ipns" minOccurs="1" maxOccurs="1"/>
-				<xs:element ref="on-demand-ipns" minOccurs="1" maxOccurs="1"/>
-			</xs:sequence>
-		</xs:complexType>
-	</xs:element>
-
-	<xs:element name="default-ipns">
-		<xs:simpleType>
-			<xs:restriction base="xs:boolean" />
-		</xs:simpleType>
-	</xs:element>
-	<xs:element name="on-demand-ipns">
-		<xs:complexType>
-			<xs:sequence>
+				<xs:element ref="send-auth-only" minOccurs="1" maxOccurs="1"/>
+				<xs:element ref="send-cancellation" minOccurs="1" maxOccurs="1"/>
+				<xs:element ref="send-cancel-on-renewal" minOccurs="1" maxOccurs="1"/>
+				<xs:element ref="send-charge" minOccurs="1" maxOccurs="1"/>
+				<xs:element ref="send-chargeback" minOccurs="1" maxOccurs="1"/>
+				<xs:element ref="send-chargeback-status-changed" minOccurs="1" maxOccurs="1"/>
+				<xs:element ref="send-contract-change" minOccurs="1" maxOccurs="1"/>
+				<xs:element ref="send-cancellation-refund" minOccurs="1" maxOccurs="1"/>
+				<xs:element ref="send-failed-payout-transfer" minOccurs="1" maxOccurs="1"/>
+				<xs:element ref="send-subscription-reminder" minOccurs="1" maxOccurs="1"/>
+				<xs:element ref="send-decline" minOccurs="1" maxOccurs="1"/>
+				<xs:element ref="send-refund" minOccurs="1" maxOccurs="1"/>
+				<xs:element ref="send-recurring" minOccurs="1" maxOccurs="1"/>
 				<xs:element ref="send-cc-failure" minOccurs="1" maxOccurs="1"/>
 				<xs:element ref="send-sub-cc-failure" minOccurs="1" maxOccurs="1"/>
 				<xs:element ref="send-under-vendor-review" minOccurs="1" maxOccurs="1"/>
@@ -47,6 +46,8 @@
 				<xs:element ref="send-merchant-onboarded" minOccurs="1" maxOccurs="1"/>
 				<xs:element ref="send-offline-order" minOccurs="1" maxOccurs="1"/>
 				<xs:element ref="send-cc-status-changed" minOccurs="1" maxOccurs="1"/>
+				<xs:element ref="send-auth-only-single-charge" minOccurs="1" maxOccurs="1"/>
+				<xs:element ref="send-vaulted-shopper" minOccurs="1" maxOccurs="1"/>
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
@@ -57,6 +58,72 @@
 		</xs:simpleType>
 	</xs:element>
 	<xs:element name="receive-affiliate-notifications">
+		<xs:simpleType>
+			<xs:restriction base="xs:boolean" />
+		</xs:simpleType>
+	</xs:element>
+
+	<xs:element name="send-auth-only">
+		<xs:simpleType>
+			<xs:restriction base="xs:boolean" />
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="send-cancellation">
+		<xs:simpleType>
+			<xs:restriction base="xs:boolean" />
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="send-cancel-on-renewal">
+		<xs:simpleType>
+			<xs:restriction base="xs:boolean" />
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="send-charge">
+		<xs:simpleType>
+			<xs:restriction base="xs:boolean" />
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="send-chargeback">
+		<xs:simpleType>
+			<xs:restriction base="xs:boolean" />
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="send-chargeback-status-changed">
+		<xs:simpleType>
+			<xs:restriction base="xs:boolean" />
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="send-contract-change">
+		<xs:simpleType>
+			<xs:restriction base="xs:boolean" />
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="send-cancellation-refund">
+		<xs:simpleType>
+			<xs:restriction base="xs:boolean" />
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="send-failed-payout-transfer">
+		<xs:simpleType>
+			<xs:restriction base="xs:boolean" />
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="send-subscription-reminder">
+		<xs:simpleType>
+			<xs:restriction base="xs:boolean" />
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="send-decline">
+		<xs:simpleType>
+			<xs:restriction base="xs:boolean" />
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="send-refund">
+		<xs:simpleType>
+			<xs:restriction base="xs:boolean" />
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="send-recurring">
 		<xs:simpleType>
 			<xs:restriction base="xs:boolean" />
 		</xs:simpleType>
@@ -137,4 +204,16 @@
 			<xs:restriction base="xs:boolean" />
 		</xs:simpleType>
 	</xs:element>
+	<xs:element name="send-auth-only-single-charge">
+		<xs:simpleType>
+			<xs:restriction base="xs:boolean" />
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="send-vaulted-shopper">
+		<xs:simpleType>
+			<xs:restriction base="xs:boolean" />
+		</xs:simpleType>
+	</xs:element>
 </xs:schema>
+
+

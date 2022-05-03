@@ -15,6 +15,7 @@
 				<xs:element ref="meta-key" />
 				<xs:element ref="meta-value" />
 				<xs:element ref="meta-description" />
+				<xs:element ref="is-visible" />
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
@@ -32,6 +33,11 @@
 		<xs:simpleType>
 			<xs:restriction base="xs:string" />
 		</xs:simpleType>
-	</xs:element>	
-  </xs:schema>               				
+	</xs:element>
+	<xs:element name="is-visible">
+		<xs:simpleType>
+			<xs:restriction base="xs:string" />
+		</xs:simpleType>
+	</xs:element>
+</xs:schema>
 				

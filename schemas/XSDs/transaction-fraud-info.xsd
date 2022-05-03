@@ -8,7 +8,10 @@
        <xs:complexType> 
             <xs:sequence>
                 <xs:element ref="fraud-session-id" minOccurs="0" maxOccurs="1" />
+                <xs:element ref="fraud-products" minOccurs="0" maxOccurs="unbounded" />
                 <xs:element ref="shopper-ip-address" minOccurs="0" maxOccurs="1" />
+                <xs:element ref="customer-id" minOccurs="0" maxOccurs="1" />
+                <xs:element ref="customer-creation-date" minOccurs="0" maxOccurs="1" />
                 <xs:element ref="company" minOccurs="0" maxOccurs="1" />
                 <xs:element ref="shipping-contact-info" minOccurs="0" />                
                 <xs:element ref="enterprise-site-id" minOccurs="0" maxOccurs="1" />
@@ -21,9 +24,56 @@
             <xs:restriction base="xs:string" />
         </xs:simpleType>
     </xs:element>
+    <xs:element name="customer-id">
+        <xs:simpleType>
+            <xs:restriction base="xs:string" />
+        </xs:simpleType>
+    </xs:element>
+    <xs:element name="customer-creation-date">
+        <xs:simpleType>
+            <xs:restriction base="xs:date" />
+        </xs:simpleType>
+    </xs:element>
     <xs:element name="company">
         <xs:simpleType>
             <xs:restriction base="xs:string" />
         </xs:simpleType>
-    </xs:element>                    
+    </xs:element>
+    <xs:element name="fraud-products">
+        <xs:complexType>
+        <xs:sequence>
+            <xs:element ref="fraud-product-name" minOccurs="1" maxOccurs="1"/>
+            <xs:element ref="fraud-product-desc" minOccurs="1" maxOccurs="1"/>
+            <xs:element ref="fraud-product-type" minOccurs="1" maxOccurs="1"/>
+            <xs:element ref="fraud-product-quantity" minOccurs="1" maxOccurs="1"/>
+            <xs:element ref="fraud-product-price" minOccurs="1" maxOccurs="1"/>
+        </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="fraud-product-name">
+        <xs:simpleType>
+            <xs:restriction base="xs:string" />
+        </xs:simpleType>
+    </xs:element>
+    <xs:element name="fraud-product-desc">
+        <xs:simpleType>
+            <xs:restriction base="xs:string" />
+        </xs:simpleType>
+    </xs:element>
+    <xs:element name="fraud-product-type">
+        <xs:simpleType>
+            <xs:restriction base="xs:string" />
+        </xs:simpleType>
+    </xs:element>
+    <xs:element name="fraud-product-quantity">
+        <xs:simpleType>
+            <xs:restriction base="xs:int" />
+        </xs:simpleType>
+    </xs:element>
+    <xs:element name="fraud-product-price">
+        <xs:simpleType>
+            <xs:restriction base="xs:decimal" />
+        </xs:simpleType>
+    </xs:element>
+
 </xs:schema>

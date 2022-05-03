@@ -49,6 +49,8 @@
 				<xs:element ref="pf-token" minOccurs="0" maxOccurs="1" />
 				<xs:element ref="local-bank-transfer-transaction" minOccurs="0" maxOccurs="1" />
 				<xs:element ref="tax-reference" minOccurs="0" maxOccurs="1"/>
+				<xs:element ref="becs-direct-debit-transaction" minOccurs="0" maxOccurs="1" />
+				<xs:element ref="acss-direct-debit-transaction" minOccurs="0" maxOccurs="1" />
 				
 				<!-- for response -->
 				<xs:element ref="transaction-approval-date" minOccurs="0" maxOccurs="1" />
