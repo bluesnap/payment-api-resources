@@ -17,6 +17,8 @@
                         	<xs:element ref="seller-order-id" minOccurs="0"/>
                             <xs:element ref="processing-info"/>
                             <xs:element name="three-d-secure" type="xs:boolean" form="qualified"/>
+                            <xs:element ref="three-d-secure-status" minOccurs="0" maxOccurs="1"/>
+                            <xs:element ref="merchant-url" minOccurs="0" maxOccurs="1"/>
                             <xs:element ref="kount-info"/>
                         </xs:sequence>
                     </xs:complexType>
@@ -31,6 +33,12 @@
                 <xs:element ref="post-sale-info" maxOccurs="unbounded"/>
             </xs:sequence>
         </xs:complexType>
+    </xs:element>
+
+    <xs:element name="merchant-url">
+        <xs:simpleType>
+            <xs:restriction base="xs:string" />
+        </xs:simpleType>
     </xs:element>
 
     <xs:element name="kount-info">

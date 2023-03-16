@@ -27,6 +27,7 @@
 		<xs:complexType>
 			<xs:sequence>
 				<xs:element ref="merchant-transaction-id" minOccurs="0"	maxOccurs="1" />
+				<xs:element ref="transaction-order-source" minOccurs="0" maxOccurs="1"/>
 				<!-- BLS invoice id for response -->
 				<xs:element ref="transaction-id" minOccurs="0" />
 				<xs:element ref="subscription-id" minOccurs="0" />
@@ -51,7 +52,7 @@
 				<xs:element ref="tax-reference" minOccurs="0" maxOccurs="1"/>
 				<xs:element ref="becs-direct-debit-transaction" minOccurs="0" maxOccurs="1" />
 				<xs:element ref="acss-direct-debit-transaction" minOccurs="0" maxOccurs="1" />
-				
+
 				<!-- for response -->
 				<xs:element ref="transaction-approval-date" minOccurs="0" maxOccurs="1" />
 				<xs:element ref="transaction-approval-time" minOccurs="0" maxOccurs="1" />
