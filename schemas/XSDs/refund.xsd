@@ -20,6 +20,7 @@
                 <xs:element ref="reason" minOccurs="0" maxOccurs="1"/>
                 <xs:element ref="cancel-subscriptions" minOccurs="0" maxOccurs="1"/>
                 <xs:element ref="level-3-data" minOccurs="0" maxOccurs="1" />
+                <xs:element ref="refund-status" minOccurs="0" maxOccurs="1" />
             </xs:sequence>
         </xs:complexType>
     </xs:element>
@@ -56,5 +57,10 @@
         </xs:simpleType>
     </xs:element>
 
+    <xs:element name="refund-status">
+        <xs:simpleType>
+            <xs:restriction base="xs:string" />
+        </xs:simpleType>
+    </xs:element>
 
 </xs:schema>
