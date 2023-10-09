@@ -20,7 +20,8 @@
 	<xs:include schemaLocation="local-bank-transfer-transaction.xsd"/>
 	<xs:include schemaLocation="ideal-transaction.xsd" />
 	<xs:include schemaLocation="sofort-transaction.xsd" />
-
+	<xs:include schemaLocation="wire-transaction.xsd" />
+	<xs:include schemaLocation="acss-direct-debit-transaction.xsd" />
 
 
 	<xs:element name="alt-transaction">
@@ -49,6 +50,7 @@
 				<xs:element ref="authorized-by-shopper" minOccurs="0" maxOccurs="1" />
 				<xs:element ref="pf-token" minOccurs="0" maxOccurs="1" />
 				<xs:element ref="local-bank-transfer-transaction" minOccurs="0" maxOccurs="1" />
+				<xs:element ref="wire-transaction" minOccurs="0"	maxOccurs="1" />
 				<xs:element ref="tax-reference" minOccurs="0" maxOccurs="1"/>
 				<xs:element ref="becs-direct-debit-transaction" minOccurs="0" maxOccurs="1" />
 				<xs:element ref="acss-direct-debit-transaction" minOccurs="0" maxOccurs="1" />
