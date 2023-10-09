@@ -17,6 +17,7 @@
     <xs:include schemaLocation="chargebacks.xsd"/>
     <xs:include schemaLocation="three-d-secure.xsd"/>
     <xs:include schemaLocation="network-transaction-info.xsd"/>
+    <xs:include schemaLocation="rdrs.xsd"/>
 
     <xs:element name="card-transaction">
         <xs:complexType>
@@ -87,6 +88,8 @@
                 <xs:element ref="chargebacks" minOccurs="0" maxOccurs="1" />
                 <xs:element ref="refunds" minOccurs="0" maxOccurs="1" />
                 <xs:element ref="captures" minOccurs="0" maxOccurs="1" />
+                <xs:element ref="rdrs" minOccurs="0" maxOccurs="1" />
+                <xs:element ref="update-shopper-with-card-holder-info" minOccurs="0" maxOccurs="1"/>
            </xs:sequence>
         </xs:complexType>
     </xs:element>
@@ -166,6 +169,12 @@
     <xs:element name="processing-fees-fixed">
         <xs:simpleType>
             <xs:restriction base="xs:decimal"/>
+        </xs:simpleType>
+    </xs:element>
+
+    <xs:element name="update-shopper-with-card-holder-info">
+        <xs:simpleType>
+            <xs:restriction base="xs:boolean" />
         </xs:simpleType>
     </xs:element>
 

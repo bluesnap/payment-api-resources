@@ -119,6 +119,7 @@
 				<xs:element ref="tax-reference" minOccurs="0" maxOccurs="1"/>
                 <xs:element ref="network-transaction-info" minOccurs="0" maxOccurs="1" />
 				<xs:element ref="transaction-initiator" minOccurs="0" maxOccurs="1"/>
+				<xs:element ref="transaction-region" minOccurs="0" maxOccurs="1"/>
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>

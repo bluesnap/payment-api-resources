@@ -48,8 +48,10 @@
 				<xs:element ref="send-cc-status-changed" minOccurs="1" maxOccurs="1"/>
 				<xs:element ref="send-auth-only-single-charge" minOccurs="1" maxOccurs="1"/>
 				<xs:element ref="send-vaulted-shopper" minOccurs="1" maxOccurs="1"/>
-				<xs:element ref="send-cb911_representment_file_uploaded" minOccurs="1" maxOccurs="1"/>
+				<xs:element ref="send-cb911-representment-file-uploaded" minOccurs="1" maxOccurs="1"/>
 				<xs:element ref="send-merchant-partner-status" minOccurs="1" maxOccurs="1"/>
+				<xs:element ref="send-pending-refund" minOccurs="1" maxOccurs="1"/>
+				<xs:element ref="send-rdr" minOccurs="1" maxOccurs="1"/>
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
@@ -217,13 +219,25 @@
 		</xs:simpleType>
 	</xs:element>
 
-	<xs:element name="send-cb911_representment_file_uploaded">
+	<xs:element name="send-cb911-representment-file-uploaded">
 		<xs:simpleType>
 			<xs:restriction base="xs:boolean" />
 		</xs:simpleType>
 	</xs:element>
 
 	<xs:element name="send-merchant-partner-status">
+		<xs:simpleType>
+			<xs:restriction base="xs:boolean" />
+		</xs:simpleType>
+	</xs:element>
+
+	<xs:element name="send-pending-refund">
+		<xs:simpleType>
+			<xs:restriction base="xs:boolean" />
+		</xs:simpleType>
+	</xs:element>
+
+	<xs:element name="send-rdr">
 		<xs:simpleType>
 			<xs:restriction base="xs:boolean" />
 		</xs:simpleType>
