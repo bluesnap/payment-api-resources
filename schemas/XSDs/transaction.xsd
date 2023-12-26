@@ -81,6 +81,8 @@
 
                 <xs:element ref="tax-reference" minOccurs="0" maxOccurs="1"/>
 
+                <xs:element ref="product-description" minOccurs="0" maxOccurs="1"/>
+
                 <!-- for response -->
                 <xs:element ref="processing-fees" minOccurs="0" maxOccurs="1" />
                 <xs:element ref="processing-info" minOccurs="0" maxOccurs="1" />
