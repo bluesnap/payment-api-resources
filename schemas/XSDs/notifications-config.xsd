@@ -53,6 +53,8 @@
 				<xs:element ref="send-pending-refund" minOccurs="1" maxOccurs="1"/>
 				<xs:element ref="send-rdr" minOccurs="1" maxOccurs="1"/>
 				<xs:element ref="send-ach-noc" minOccurs="1" maxOccurs="1"/>
+				<xs:element ref="send-balance-funding" minOccurs="1" maxOccurs="1"/>
+				<xs:element ref="send-platform-notify" minOccurs="1" maxOccurs="1"/>
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
@@ -245,6 +247,18 @@
 	</xs:element>
 
 	<xs:element name="send-ach-noc">
+		<xs:simpleType>
+			<xs:restriction base="xs:boolean" />
+		</xs:simpleType>
+	</xs:element>
+
+	<xs:element name="send-balance-funding">
+		<xs:simpleType>
+			<xs:restriction base="xs:boolean" />
+		</xs:simpleType>
+	</xs:element>
+
+	<xs:element name="send-platform-notify">
 		<xs:simpleType>
 			<xs:restriction base="xs:boolean" />
 		</xs:simpleType>

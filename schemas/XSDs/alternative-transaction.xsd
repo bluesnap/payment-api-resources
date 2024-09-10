@@ -22,6 +22,7 @@
 	<xs:include schemaLocation="sofort-transaction.xsd" />
 	<xs:include schemaLocation="wire-transaction.xsd" />
 	<xs:include schemaLocation="acss-direct-debit-transaction.xsd" />
+	<xs:include schemaLocation="pay-by-bank-transaction.xsd" />
 
 
 	<xs:element name="alt-transaction">
@@ -54,6 +55,7 @@
 				<xs:element ref="tax-reference" minOccurs="0" maxOccurs="1"/>
 				<xs:element ref="becs-direct-debit-transaction" minOccurs="0" maxOccurs="1" />
 				<xs:element ref="acss-direct-debit-transaction" minOccurs="0" maxOccurs="1" />
+				<xs:element ref="pay-by-bank-transaction" minOccurs="0" maxOccurs="1" />
 				<xs:element ref="product-description" minOccurs="0" maxOccurs="1"/>
 
 				<!-- for response -->

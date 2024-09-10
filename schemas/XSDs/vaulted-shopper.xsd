@@ -54,6 +54,7 @@
 				<xs:element ref="sepa-direct-debit-info" minOccurs="0" maxOccurs="unbounded" />
 				<xs:element ref="becs-direct-debit-info" minOccurs="0" maxOccurs="unbounded" />
 				<xs:element ref="acss-direct-debit-info" minOccurs="0" maxOccurs="unbounded" />
+				<xs:element ref="pay-by-bank-info" minOccurs="0" maxOccurs="unbounded" />
 				<xs:element ref="ecp-details" minOccurs="0" maxOccurs="unbounded" />
 			</xs:sequence>
 		</xs:complexType>
@@ -67,8 +68,9 @@
 				<xs:element ref="ecp" minOccurs="0" maxOccurs="1" />	
 				<xs:element ref="wallet" minOccurs="0" maxOccurs="1" />
 				<xs:element ref="sepa-direct-debit" minOccurs="0" maxOccurs="1" />			
-				<xs:element ref="becs-direct-debit" minOccurs="0" maxOccurs="unbounded" />
-				<xs:element ref="acss-direct-debit" minOccurs="0" maxOccurs="unbounded" />
+				<xs:element ref="becs-direct-debit" minOccurs="0" maxOccurs="1" />
+				<xs:element ref="acss-direct-debit" minOccurs="0" maxOccurs="1" />
+				<xs:element ref="pay-by-bank" minOccurs="0" maxOccurs="1" />
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
